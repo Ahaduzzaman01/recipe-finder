@@ -1,0 +1,125 @@
+body{
+    font-family: 'Poppins', sans-serif;
+}
+
+header{
+    background-color: #FFFBF0;
+}
+
+h1, h3{
+    font-family: 'Bebas Neue', cursive;
+
+}
+
+h1{
+    font-size: 3.3rem;
+}
+
+p{
+    color: dimgray;
+}
+
+h5{
+    color:navy;
+}
+
+a.custom-link-only-btn {
+  color: #56ab2fcf;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.responsive-image {
+    /* max-width: 70%; */
+    height: auto;
+    cursor: pointer;
+}
+
+.yellow-text{
+    color: #FABE4C;
+}
+
+.navy-text{
+    color:rgb(72 80 160);
+}
+
+.watch-background {
+  background-color: rgba(211, 211, 211, 0.26);
+  border-radius: 1.4rem;
+  margin: auto;
+  overflow: hidden; /* Ensures the image stays within the rounded corners */
+}
+
+.watch-background img {
+  transition: transform 0.4s ease; /* Smooth transition for zoom effect */
+}
+
+.watch-background:hover img {
+  transform: scale(1.1); /* Scale up image to 110% on hover */
+}
+
+.custom-card{
+    border: none;
+    border-radius: 1.5rem;
+}
+
+.custom-card-footer{
+    border: none;
+    background: none;
+}
+
+.shoping-cart {
+    width: 15%;
+    margin-right: 10px;
+}
+
+.custom-primary-button {
+  background: linear-gradient(45deg, #56ab2fcf, #a8e0639e, #56ab2fcf);
+  background-size: 200%;
+  background-position: left;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  color: #fff;
+  font-family: 'Poppins';
+  font-weight: 600;
+  width: fit-content;
+  text-decoration: none;
+  transition: background-position 0.4s ease;
+  padding: 8px 16px;
+}
+
+.custom-primary-button:hover {
+  background-position: right;
+  color: #fff;
+}
+
+
+#other-font{
+    font-family: 'Sacramento', cursive;
+    font-weight: 600;
+    color: #EA5E5D;
+}
+
+.email-submit-area{
+    background-color:#f7efda;
+    height: 300px;
+}
+
+.email-submit-area input {
+    border: none;
+    outline: none;
+    padding: 2%;
+    border-radius: .3rem;
+    font-size: 13px;
+}
+
+.footer-bg {
+    height: 27px;
+    background-color: rgb(67 67 67);
+}
+
+.footer-bg small {
+    color: #fff;
+    font-size: 12px;
+}

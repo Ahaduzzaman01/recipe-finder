@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Penguin Watch</title>
+    <!-- bootstrap css -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+    <!-- external css -->
+    <link rel="stylesheet" href="style.css">
+    <!-- google font -->
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Sacramento&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap"
+        rel="stylesheet">
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/brands.min.css"
+        integrity="sha512-EJp8vMVhYl7tBFE2rgNGb//drnr1+6XKMvTyamMS34YwOEFohhWkGq13tPWnK0FbjSS6D8YoA3n3bZmb3KiUYA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/js/all.min.js" integrity="sha512-6sSYJqDreZRZGkJ3b+YfdhB3MzmuP9R7X1QZ6g5aIXhRvR1Y/N/P47jmnkENm7YL3oqsmI6AK+V6AD99uWDnIw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/js/brands.min.js" integrity="sha512-N5K6sQXjzT79tR16zvBu7B0AqvYtHKvk3+eKuQWoVNQDGU5kR9W8OP3CTYtm3vVM2EtObrmtm0Jup17F718OyA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
+</head>
+
+<body>
+
+    <!-- header starts here -->
+    <header>
+        <!-- nav start here -->
+        <nav class="container py-3 navbar navbar-expand-lg navbar-light">
+            <div class="container-fluid">
+                <a href="./index.html" style="max-width: 70%;"><img class="responsive-image" src="images/logo.png" alt=""></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto fw-bold">
+                        <li class="nav-item">
+                            <a class="nav-link" href="./index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#Recipes">Recipes</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- nav end here -->
+    </header>
+    <!-- header end here -->
+
+    <main class="container">
+        <!-- woman watch collection start -->
+        <section id="product" class="mt-5 mb-5">
+            <div class="d-flex justify-content-between align-items-center">
+                <h3 class="navy-text ">CHICKEN RECIPES</h3>
+                <a href="view-all.html?category=Chicken" class="custom-link-only-btn">View All</a>
+            </div>
+
+            <div id="chicken-section" class="row row-cols-1 row-cols-md-3 g-4 card-height mt-4"></div>
+
+        </section>
+
+        <section id="product" class="mt-5 mb-5">
+            <div class="d-flex justify-content-between align-items-center">
+                <h3 class="navy-text ">SEAFOOD RECIPES</h3>
+                <a href="view-all.html?category=Seafood" class="custom-link-only-btn">View All</a>
+            </div>
+
+            <div id="seafood-section" class="row row-cols-1 row-cols-md-3 g-4 card-height mt-4"></div>
+
+        </section>
+
+        <section id="product" class="mt-5 mb-5">
+            <div class="d-flex justify-content-between align-items-center">
+                <h3 class="navy-text ">DESSERT RECIPES</h3>
+                <a href="view-all.html?category=Dessert" class="custom-link-only-btn">View All</a>
+            </div>
+
+            <div id="dessert-section" class="row row-cols-1 row-cols-md-3 g-4 card-height mt-4"></div>
+
+        </section>
+    </main>
+
+    <footer class="mt-5">
+        <section class="d-flex text-center justify-content-center align-items-center email-submit-area">
+            <div>
+                <h4 id="other-font">Penguin Watch</h4>
+                <h3 class="navy-text">WELCOME AND ENJOY</h3>
+                <h1 class="yellow-text">10% OFF</h1>
+                <p>plus free shipping on your first purchase when you join our mailing list.</p>
+                <input type="text" placeholder="Enter Email Here">
+                <button class="btn mt-1 btn-warning">JOIN</button>
+            </div>
+        </section>
+        <div class="footer-bg text-center">
+            <small class="">©2021. Penguin Wa. All rights reserved. Los Angeles, America</small>
+        </div>
+
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+        crossorigin="anonymous"></script>
+    <script src="./script.js"></script>
+</body>
+
+</html>
