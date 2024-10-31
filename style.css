@@ -24,10 +24,29 @@ h5{
 }
 
 a.custom-link-only-btn {
-  color: #56ab2fcf;
-  text-decoration: none;
-  font-weight: bold;
+    color: #56ab2fcf;
+    text-decoration: none;
+    font-weight: bold;
+    position: relative; /* Create a positioning context for the pseudo-element */
 }
+
+a.custom-link-only-btn::after {
+    content: ""; /* Empty content for the pseudo-element */
+    display: block; /* Allows the element to take up space */
+    width: 100%; /* Full width of the link */
+    height: 2px; /* Thickness of the border */
+    background: #56ab2fcf; /* Same color as the link */
+    position: absolute; /* Position it relative to the link */
+    left: 0; /* Align to the left */
+    bottom: 0px; /* Position below the text */
+    transform: scaleX(0); /* Initially hidden */
+    transition: transform 0.3s ease; /* Animation effect */
+}
+
+a.custom-link-only-btn:hover::after {
+    transform: scaleX(1); /* Scale to full width on hover */
+}
+
 
 .responsive-image {
     /* max-width: 70%; */

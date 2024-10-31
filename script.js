@@ -1,24 +1,44 @@
-// Define the base API URLs for fetching data
-const apiUrls = {
+let apiUrls = {
     Seafood: "https://www.themealdb.com/api/json/v1/1/filter.php?c=Seafood",
     Chicken: "https://www.themealdb.com/api/json/v1/1/filter.php?c=Chicken",
     Dessert: "https://www.themealdb.com/api/json/v1/1/filter.php?c=Dessert"
 };
 const mealDetailsUrl = "https://www.themealdb.com/api/json/v1/1/lookup.php?i=";
-let mealDetails = []; // Store meal details to avoid refetching
+const categoriesUrl = "https://www.themealdb.com/api/json/v1/1/list.php?c=list";
+let mealDetails = [];
 
-async function fetchMeals(category, limit = null) {
+async function fetchMeals(category, limit = null, from = null) {
     try {
-        const response = await fetch(apiUrls[category]);
-        const data = await response.json();
-        const meals = limit ? data.meals.slice(0, limit) : data.meals;
-
-        // Fetch all meal details only once
-        mealDetails = await Promise.all(
-            meals.map(meal => fetch(mealDetailsUrl + meal.idMeal).then(res => res.json()))
-        );
-
-        displayMeals(mealDetails, limit ? `${category.toLowerCase()}-section` : "all-meals-section");
+        if (from === "recipes") {
+            const categoriesResponse = await fetch(categoriesUrl);
+            const categoriesData = await categoriesResponse.json();
+            
+            apiUrls = categoriesData.meals.reduce((acc, category) => {
+                const categoryName = category.strCategory;
+                acc[categoryName] = `https://www.themealdb.com/api/json/v1/1/filter.php?c=${categoryName}`;
+                return acc;
+            }, {});
+    
+            const response = await fetch(apiUrls[category]);
+            const data = await response.json();
+            const meals = limit ? data.meals.slice(0, limit) : data.meals;
+            
+            mealDetails = await Promise.all(
+                meals.map(meal => fetch(mealDetailsUrl + meal.idMeal).then(res => res.json()))
+            );
+            
+            displayMeals(mealDetails, limit ? `${category.toLowerCase()}-section` : "all-meals-section");
+        } else{
+            const response = await fetch(apiUrls[category]);
+            const data = await response.json();
+            const meals = limit ? data.meals.slice(0, limit) : data.meals;
+            
+            mealDetails = await Promise.all(
+                meals.map(meal => fetch(mealDetailsUrl + meal.idMeal).then(res => res.json()))
+            );
+            
+            displayMeals(mealDetails, limit ? `${category.toLowerCase()}-section` : "all-meals-section");
+        }
 
     } catch (error) {
         console.error("Error fetching meal data:", error);
@@ -39,7 +59,7 @@ function displayMeals(mealDetails, sectionId) {
                             </a>
                         </div>
                         <div class="card-body">
-                            <h5 class="card-title text-center  text-truncate" style="font-size: 17px">${meal.strMeal}</h5>
+                            <h5 class="card-title text-center text-truncate" style="font-size: 17px">${meal.strMeal}</h5>
                         </div>
                         <div class="card-footer custom-card-footer d-flex justify-content-center align-items-center">
                             <a href="#" class="custom-primary-button">
@@ -54,15 +74,15 @@ function displayMeals(mealDetails, sectionId) {
         .join("");
 }
 
-// Usage on the main page (displays only a limited number of meals for each category)
 fetchMeals("Seafood", 4);
 fetchMeals("Chicken", 4);
 fetchMeals("Dessert", 4);
 
-// Usage on the "View All" page
-// Get the category from the URL
 const params = new URLSearchParams(window.location.search);
 const category = params.get("category");
-if (category) {
-    fetchMeals(category); // Fetch and display all meals for the chosen category
+const from = params.get("from");
+if (category && from === null) {
+    fetchMeals(category);
+} else if (category && from != null) {
+    fetchMeals(category, null, from);
 }
