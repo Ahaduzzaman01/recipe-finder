@@ -59,15 +59,15 @@ async function fetchAndDisplayMeals({ apiUrl, sectionId }) {
                     <div class="col-sm-12 col-md-4 col-lg-3">
                         <div class="container card custom-card h-100 shadow py-4">
                             <div class="watch-background">
-                                <a href="#">
+                                <a href="recipe-details.html?id=${meal.idMeal}">
                                     <img class="img-fluid" src="${meal.strMealThumb}" class="card-img-top" alt="${meal.strMeal}">
                                 </a>
                             </div>
                             <div class="card-body">
-                                <h5 class="card-title text-center text-truncate" style="font-size: 17px">${meal.strMeal}</h5>
+                                <h5 class="mb-0 card-title text-center text-truncate" style="font-size: 17px"><a class="text-decoration-none" style="color: inherit;" href="recipe-details.html?id=${meal.idMeal}">${meal.strMeal}</a></h5>
                             </div>
-                            <div class="card-footer custom-card-footer d-flex justify-content-center align-items-center">
-                                <a href="#" class="custom-primary-button">
+                            <div class="card-footer py-0 custom-card-footer d-flex justify-content-center align-items-center">
+                                <a href="recipe-details.html?id=${meal.idMeal}" class="custom-primary-button">
                                     <i class="fa-regular fa-eye"></i>
                                     <span>View Recipe</span>
                                 </a>
