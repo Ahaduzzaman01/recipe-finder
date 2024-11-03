@@ -37,7 +37,7 @@ h5{
 }
 
 .custom-search-bar select,
-.custom-search-bar input#search-input,
+.custom-search-bar input#search-keyword,
 .custom-search-bar button[type=submit] {
     background: none;
     border: none;

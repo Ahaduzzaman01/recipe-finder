@@ -44,7 +44,7 @@
                     <div class="navbar-nav mx-lg-auto">
                         <form action="get">
                             <div class="custom-search-bar">
-                                <select name="select-filter" id="select-filter">
+                                <select name="selected-filter" id="selected-filter" required="true">
                                     <option value="1">Search by Name</option>
                                     <option value="2">Search by Ingredients</option>
                                     <option value="2">Search by Cuisine</option>
@@ -52,7 +52,7 @@
 
                                 <div class="searchbar-border"></div>
 
-                                <input type="text" name="search-input" id="search-input">
+                                <input type="text" name="search-keyword" id="search-keyword" required="true">
                                 <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
                             </div>
                         </form>
