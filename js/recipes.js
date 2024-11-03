@@ -3,7 +3,7 @@ const mealDetailsUrl = "https://www.themealdb.com/api/json/v1/1/lookup.php?i=";
 const mealCategoryBaseUrl = "https://www.themealdb.com/api/json/v1/1/filter.php?c=";
 
 // Main container for all sections
-const mainContainer = document.querySelector("main.container");
+const mainContainer = document.querySelector("main.recipes-container");
 
 // Function to fetch meal categories and dynamically create sections
 async function fetchMealCategories() {
@@ -29,6 +29,10 @@ async function fetchMealCategories() {
 function createCategorySection({ sectionId, categoryName }) {
     const section = document.createElement("section");
     section.className = "mt-5 mb-5";
+
+    if (mainContainer.children.length === 0) {
+        section.classList.add("pt-5");
+    }
 
     section.innerHTML = `
         <div class="d-flex justify-content-between align-items-center">

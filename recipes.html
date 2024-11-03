@@ -30,17 +30,32 @@
 <body>
 
     <!-- header starts here -->
-    <header>
+    <header class="fixed-top">
         <!-- nav start here -->
         <nav class="container py-3 navbar navbar-expand-lg navbar-light">
             <div class="container-fluid">
-                <a href="./index.html" style="max-width: 70%;"><img class="responsive-image" src="images/logo.png" alt=""></a>
+                <a href="./index.html" style="max-width: 70%;"><img class="responsive-image" src="images/logo.png"
+                        alt=""></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ms-auto fw-bold">
+                    <div class="navbar-nav mx-lg-auto">
+                        <div class="custom-search-bar">
+                            <form action="get">
+                                <select name="select-filter" id="select-filter">
+                                    <option value="1">Search by Name</option>
+                                    <option value="2">Search by Ingredients</option>
+                                    <option value="2">Search by Cuisine</option>
+                                </select>
+
+                                <input type="text" name="search-input" id="search-input">
+                                <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+                            </form>
+                        </div>
+                    </div>
+                    <ul class="navbar-nav fw-bold">
                         <li class="nav-item">
                             <a class="nav-link" href="./index.html">Home</a>
                         </li>
@@ -55,7 +70,7 @@
     </header>
     <!-- header end here -->
 
-    <main class="container">
+    <main class="container recipes-container space-for-navbar">
         
     </main>
 

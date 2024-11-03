@@ -23,6 +23,10 @@ h5{
     color:navy;
 }
 
+.space-for-navbar{
+    margin-top: 86px;
+}
+
 a.custom-link-only-btn {
     color: #56ab2fcf;
     text-decoration: none;

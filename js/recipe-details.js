@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
                     // Step 3: Create HTML elements to display the recipe details
                     const recipeHTML = `
-                        <div>
+                        <div class="pt-5">
                             <h2>${meal.strMeal}</h2>
                             ${youtubeEmbed}
 
