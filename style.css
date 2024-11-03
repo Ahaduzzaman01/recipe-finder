@@ -19,10 +19,6 @@ p{
     color: dimgray;
 }
 
-h5{
-    color:navy;
-}
-
 .space-for-navbar{
     margin-top: 86px;
 }
@@ -53,7 +49,7 @@ h5{
     margin: 0px 5px;
 }
 
-a.custom-link-only-btn {
+.custom-link-only-btn {
     color: #56ab2fcf;
     text-decoration: none;
     font-weight: bold;
@@ -88,8 +84,19 @@ a.custom-link-only-btn:hover::after {
     color: #FABE4C;
 }
 
-.navy-text{
+.green-text{
+    color: #56ab2fcf;
+}
+
+.navy-text,
+h5{
     color:rgb(72 80 160);
+}
+
+div#featured-category {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-gap: 20px;
 }
 
 .watch-background {
