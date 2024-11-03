@@ -3,6 +3,10 @@ const params = new URLSearchParams(window.location.search);
 const selectedFilter = params.get('selected-filter');
 const searchKeyword = params.get('search-keyword');
 const mealsSection = document.getElementById('searched-meals-section');
+const filterSelectBox = document.getElementById('selected-filter');
+filterSelectBox.value = selectedFilter;
+const searchkeywordInput = document.getElementById('search-keyword');
+searchkeywordInput.value = searchKeyword;
 const noResults = document.getElementById('no-results');
 
 async function fetchMeals() {
