@@ -73,6 +73,11 @@
     <!-- header end here -->
 
     <main class="container space-for-navbar">
+        <div class="page-headline">
+            <h3 class="yellow-text text-center pt-5 mt-5 mb-5 fs-2">
+                <div>Explore Delicious <span id="category-name"></span> Recipes</div>
+            </h3>
+        </div>
         <div id="all-meals-section" class="row row-cols-1 row-cols-md-3 g-4 card-height mt-0"></div>
     </main>
 
@@ -96,6 +101,12 @@
         integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
         crossorigin="anonymous"></script>
     <script src="./js/script.js"></script>
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const recipeCategory = urlParams.get('category');
+
+        document.getElementById('category-name').textContent = recipeCategory;
+    </script>
 </body>
 
 </html>

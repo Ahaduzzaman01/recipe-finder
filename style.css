@@ -172,3 +172,23 @@ a.custom-link-only-btn:hover::after {
     color: #fff;
     font-size: 12px;
 }
+
+.page-headline h3 {
+    letter-spacing:1px;
+    transition: all 0.4s ease 0s;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    align-items: center;
+}
+
+.page-headline h3:after,
+.page-headline h3:before {
+    content: " ";
+    display: block;
+    border-bottom: 1px solid #FABE4C;
+    border-top: 1px solid #FABE4C;
+    height: 5px;
+    width: 10%;
+    background-color:#f8f8f8;
+}
