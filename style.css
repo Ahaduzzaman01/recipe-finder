@@ -27,6 +27,32 @@ h5{
     margin-top: 86px;
 }
 
+.custom-search-bar {
+    border: 2px solid rgba(0,0,0,.55);
+    border-radius: 100vmax;
+    background-color: #fff;
+    padding: 6px 12px;
+    display: flex;
+    align-items: center;
+}
+
+.custom-search-bar select,
+.custom-search-bar input#search-input,
+.custom-search-bar button[type=submit] {
+    background: none;
+    border: none;
+    outline: none;
+    color: rgba(0,0,0,.55);
+    font-size: 15px;
+}
+
+.searchbar-border{
+    width: 2px;
+    height: 20px;
+    background-color: rgba(0, 0, 0, .55);
+    margin: 0px 5px;
+}
+
 a.custom-link-only-btn {
     color: #56ab2fcf;
     text-decoration: none;
