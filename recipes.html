@@ -42,18 +42,20 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <div class="navbar-nav mx-lg-auto">
-                        <div class="custom-search-bar">
-                            <form action="get">
+                        <form action="get">
+                            <div class="custom-search-bar">
                                 <select name="select-filter" id="select-filter">
                                     <option value="1">Search by Name</option>
                                     <option value="2">Search by Ingredients</option>
                                     <option value="2">Search by Cuisine</option>
                                 </select>
 
+                                <div class="searchbar-border"></div>
+
                                 <input type="text" name="search-input" id="search-input">
                                 <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
-                            </form>
-                        </div>
+                            </div>
+                        </form>
                     </div>
                     <ul class="navbar-nav fw-bold">
                         <li class="nav-item">
@@ -71,7 +73,7 @@
     <!-- header end here -->
 
     <main class="container recipes-container space-for-navbar">
-        
+
     </main>
 
     <footer class="mt-5">
