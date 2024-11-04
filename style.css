@@ -324,3 +324,9 @@ div#category-list li:not(:last-child) {
     padding-bottom: 5px;
     border-bottom: 1px solid #ddd;
 }
+
+.develepor-info img {
+    border-radius: 50px;
+    max-width: 50%;
+    margin: 0 auto;
+}
