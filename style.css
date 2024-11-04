@@ -9,8 +9,9 @@ header{
 h1,
 h2,
 h3,
-.hero-content-wrapper h4,
-.hero-content-wrapper h2{
+h4,
+h4,
+h2{
     font-family: 'Bebas Neue', cursive;
 
 }
@@ -19,7 +20,8 @@ h1{
     font-size: 3.3rem;
 }
 
-p{
+p,
+li{
     color: dimgray;
 }
 
