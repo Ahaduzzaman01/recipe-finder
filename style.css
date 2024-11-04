@@ -316,3 +316,9 @@ div#featured-category {
     left: 0;
     z-index: 1;
 }
+
+div#category-list li:not(:last-child) {
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #ddd;
+}
