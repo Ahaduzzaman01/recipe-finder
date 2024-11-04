@@ -18,39 +18,40 @@ document.addEventListener("DOMContentLoaded", function () {
                     if (meal.strYoutube) {
                         const youtubeID = meal.strYoutube.split("v=")[1];
                         youtubeEmbed = `
-                            <iframe width="560" height="315" src="https://www.youtube.com/embed/${youtubeID}" 
+                            <iframe id="empbed-yt" src="https://www.youtube.com/embed/${youtubeID}" 
                                     frameborder="0" allowfullscreen></iframe>
                         `;
                     }
 
                     // Step 3: Create HTML elements to display the recipe details
                     const recipeHTML = `
-                        <div class="pt-5">
-                            <h2>${meal.strMeal}</h2>
-                            ${youtubeEmbed}
+                            <div class="container card custom-card h-100 shadow py-4">
+                                <h2 class="mb-4 yellow-text">${meal.strMeal}</h2>
+                                ${youtubeEmbed}
 
-                            <div>
-                                <h3>Ingredients:</h3>
-                                <ul>
-                                    ${getIngredients(meal)}
-                                </ul>
-                            </div>
+                                <div>
+                                    <h3 class="my-4 navy-text">Ingredients:</h3>
+                                    <ul class="mb-0">
+                                        ${getIngredients(meal)}
+                                    </ul>
+                                </div>
 
-                            <div>
-                                <img src="${meal.strMealThumb}" alt="${meal.strMeal}" class="recipe-image" />
+                                <div class="my-4">
+                                    <img style="width: 100%; height: auto; border-radius: 20px;" src="${meal.strMealThumb}" alt="${meal.strMeal}" class="recipe-image" />
+                                </div>
+                                
+                                <p class="mb-0"><strong class="green-text">Category:</strong> <a class="text-decoration-none navy-text" href="view-all.html?category=${meal.strCategory}">${meal.strCategory}</a></p>
+                                <p class="mb-0"><strong class="green-text">Cuisine:</strong> <a class="text-decoration-none navy-text" href="view-all.html?category=${meal.strCategory}">${meal.strArea}</a></p>
+                                <h2 class="my-4 navy-text">Instructions:</h2>
+                                <p>${meal.strInstructions}</p>
                             </div>
-                            
-                            <p><strong>Category:</strong> ${meal.strCategory}</p>
-                            <p><strong>Cuisine:</strong> ${meal.strArea}</p>
-                            <p><strong>Instructions:</strong></p>
-                            <p>${meal.strInstructions}</p>
                         </div>
                     `;
 
                     // Step 4: Append to the wrapper
                     recipeDetailsWrapper.innerHTML = recipeHTML;
                 } else {
-                    recipeDetailsWrapper.innerHTML = "<p>Recipe not found.</p>";
+                    recipeDetailsWrapper.innerHTML = '<div class="m-t mb-0 alert alert-warning">Recipe not found!</div>';
                 }
             })
             .catch(error => {
