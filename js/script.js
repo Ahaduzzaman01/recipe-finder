@@ -717,7 +717,7 @@ async function fetchAndDisplayCategories() {
 
             // Create anchor element
             const anchor = document.createElement("a");
-            anchor.href = "#";
+            anchor.href = `view-all.html?category=${category}&from=recipes`;
             anchor.classList.add("text-decoration-none", "p-3", "h-100", "w-100", "d-flex", "justify-content-center", "align-items-center", "flex-column", "gap-4");
 
             // Insert SVG icon (or a placeholder if no icon available)
