@@ -23,6 +23,24 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/brands.min.css"
         integrity="sha512-EJp8vMVhYl7tBFE2rgNGb//drnr1+6XKMvTyamMS34YwOEFohhWkGq13tPWnK0FbjSS6D8YoA3n3bZmb3KiUYA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+        header {
+            background-color: unset;
+        }
+
+        .custom-style-nav {
+            backdrop-filter: blur(5px);
+            background: rgb(255 255 255 / 0.5);
+            border-radius: 100vmax;
+            margin-top: 20px;
+        }
+
+        .custom-search-bar {
+            background-color: #ffffff85;
+        }
+    </style>
+
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/js/all.min.js" integrity="sha512-6sSYJqDreZRZGkJ3b+YfdhB3MzmuP9R7X1QZ6g5aIXhRvR1Y/N/P47jmnkENm7YL3oqsmI6AK+V6AD99uWDnIw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/js/brands.min.js" integrity="sha512-N5K6sQXjzT79tR16zvBu7B0AqvYtHKvk3+eKuQWoVNQDGU5kR9W8OP3CTYtm3vVM2EtObrmtm0Jup17F718OyA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
 </head>
@@ -32,7 +50,7 @@
     <!-- header starts here -->
     <header class="fixed-top">
         <!-- nav start here -->
-        <nav class="container py-3 navbar navbar-expand-lg navbar-light">
+        <nav class="custom-style-nav container py-3 navbar navbar-expand-lg navbar-light">
             <div class="container-fluid">
                 <a href="./index.html" style="max-width: 70%;"><img class="responsive-image" src="images/logo.png"
                         alt=""></a>
@@ -72,25 +90,37 @@
     </header>
     <!-- header end here -->
 
-    <main class="container space-for-navbar">
+    <main>
 
+        <section class="mb-5" id="home-hero-section">
+            <div class="hero-content-wrapper space-for-navbar">
+                <h3 class="navy-text">Welcome to Recipe Finder</h3>
+                <h1 class="green-text">Discover Delicious Recipes</h1>
+                <h2 class="yellow-text mb-3">Simple steps to create delicious meals at home</h2>
 
-        <section class="mb-5">
+                <div class="d-flex justify-content-center align-items-center gap-4">
+                    <a href="#" class="hero-btn"><span>Explore Recipes</span></a>
+                    <a href="#" class="hero-btn style-2"><span>About Us</span></a>
+                </div>
+            </div>
+        </section>
+
+        <section class="container mb-5">
             <div class="page-headline">
                 <h3 class="yellow-text text-center pt-5 mt-5 fs-2">Featured Category</h3>
                 <p class="text-center green-text">Get Your Desired Recipe from Featured Category!</p>
 
                 <div id="featured-category" class="mt-4">
-                    
+
                 </div>
             </div>
         </section>
 
-        <div class="page-headline">
+        <div class="container page-headline">
             <h3 class="yellow-text text-center mt-5 mb-5 fs-2">Explore Delicious Recipes</h3>
         </div>
 
-        <section class="home-recipes mb-5">
+        <section class="container home-recipes mb-5">
             <div class="d-flex justify-content-between align-items-center">
                 <h3 class="navy-text mb-0">CHICKEN RECIPES</h3>
                 <a href="view-all.html?category=Chicken" class="custom-link-only-btn">View All</a>
@@ -100,7 +130,7 @@
 
         </section>
 
-        <section class="home-recipes mt-5 mb-5">
+        <section class="container home-recipes mt-5 mb-5">
             <div class="d-flex justify-content-between align-items-center">
                 <h3 class="navy-text mb-0">SEAFOOD RECIPES</h3>
                 <a href="view-all.html?category=Seafood" class="custom-link-only-btn">View All</a>
@@ -110,7 +140,7 @@
 
         </section>
 
-        <section class="home-recipes mt-5 mb-5">
+        <section class="container home-recipes mt-5 mb-5">
             <div class="d-flex justify-content-between align-items-center">
                 <h3 class="navy-text mb-0">DESSERT RECIPES</h3>
                 <a href="view-all.html?category=Dessert" class="custom-link-only-btn">View All</a>
