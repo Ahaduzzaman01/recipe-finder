@@ -29,6 +29,10 @@ li{
     margin-top: 86px;
 }
 
+img.responsive-image.header-logo {
+    height: 54px;
+}
+
 .custom-search-bar {
     border: 2px solid #56ab2fcf;
     border-radius: 100vmax;
