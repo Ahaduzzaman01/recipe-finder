@@ -2,8 +2,15 @@ body{
     font-family: 'Poppins', sans-serif;
 }
 
-header{
-    background-color: #FFFBF0;
+.custom-style-nav {
+    backdrop-filter: blur(5px);
+    background: #f4f5f9;
+    border-radius: 100vmax;
+    margin-top: 20px;
+}
+
+.custom-search-bar {
+    background-color: #ffffff85;
 }
 
 h1,
