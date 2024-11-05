@@ -89,3 +89,9 @@ async function fetchAndDisplayMeals({ apiUrl, sectionId }) {
 
 // Initialize category sections and display meals on page load
 fetchMealCategories();
+
+window.addEventListener("load", function () {
+	setTimeout(function(){
+        document.getElementById("loader").style.display = "none";
+    }, 1000);
+});
