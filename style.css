@@ -267,12 +267,15 @@ div#featured-category {
     color: #EA5E5D;
 }
 
-.email-submit-area{
-    background-color:#f7efda;
-    height: 300px;
+.footer-wrapper {
+    background-color: rgb(72 80 160 / 6%);
+    border-radius: 50px;
+    position: relative;
+    bottom: 70px;
+    margin-top: 160px;
 }
 
-.email-submit-area input {
+.footer-wrapper input {
     border: none;
     outline: none;
     padding: 2%;
