@@ -327,6 +327,12 @@ div#category-list li:not(:last-child) {
 
 .develepor-info img {
     border-radius: 50px;
-    max-width: 50%;
     margin: 0 auto;
+    width: 318px;
+    height: 318px;
+    object-fit: cover;
+}
+
+.develepor-info{
+    border
 }
