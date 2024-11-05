@@ -798,7 +798,7 @@ function displayMeals(mealDetails, sectionId) {
         .map(({ meals }) => {
             const meal = meals[0];
             return `
-                <div class="col-sm-12 col-md-4 col-lg-3 ${sectionId == "all-meals-section" ? "mt-5" : ""}">
+                <div class="col-sm-12 col-md-4 col-lg-3">
                     <div class="container card custom-card h-100 shadow py-4">
                         <div class="watch-background">
                             <a href="recipe-details.html?id=${meal.idMeal}">
