@@ -331,7 +331,7 @@ div#featured-category {
 
 .sidebar-category{
     position: sticky;
-    top: 134px;
+    top: 0px;
     left: 0;
     z-index: 1;
 }
@@ -366,4 +366,120 @@ div#loader {
     justify-content: center;
     align-items: center;
     z-index: 11111;
+}
+
+@media only screen and (max-width: 1199px) {
+    div#featured-category {
+        grid-template-columns: repeat(5, 1fr);
+    }
+
+    input#search-keyword {
+        width: 150px;
+    }
+
+    .custom-search-bar{
+        max-width: 435px;
+        overflow: hidden;
+    }
+
+    .hero-content-wrapper h1 {
+        font-size: 70px;
+    }
+
+    .hero-content-wrapper h3 {
+        font-size: 28px;
+    }
+
+    .hero-content-wrapper h2 {
+        font-size: 34px;
+    }
+
+    .custom-primary-button {
+        font-size: 13px;
+    }
+}
+
+@media only screen and (max-width: 991px) {
+    input#search-keyword {
+        width: 100%;
+    }
+
+    input#search-keyword {
+        width: unset;
+    }
+
+    .custom-search-bar{
+        margin: 25px 0px 8px;
+        max-width: unset;
+    }
+
+    div#featured-category {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .custom-style-nav button.navbar-toggler {
+        border: none;
+        outline: none;
+        appearance: none;
+        box-shadow: none;
+    }
+
+    .custom-style-nav {
+        border-radius: 15px;
+    }
+
+    .footer-link-wrapper {
+        width: unset !important;
+        margin: 0 !important;
+        text-align: center;
+        margin-bottom: 20px !important;
+    }
+
+    #empbed-yt {
+        height: 250px;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    div#featured-category {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .footer-logo-wrapper {
+        text-align: center;
+    }
+
+    .hero-content-wrapper h3 {
+        font-size: 26px;
+    }
+
+    .hero-content-wrapper h1 {
+        font-size: 60px;
+    }
+
+    .hero-content-wrapper h2 {
+        font-size: 32px;
+    }
+
+    div#recipe-details-cat {
+        margin-top: 40px !important;
+    }
+}
+
+@media only screen and (max-width: 575px) {
+    div#featured-category {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .hero-content-wrapper h3 {
+        font-size: 23px;
+    }
+
+    .hero-content-wrapper h1 {
+        font-size: 50px;
+    }
+
+    .hero-content-wrapper h2 {
+        font-size: 28px;
+    }
 }

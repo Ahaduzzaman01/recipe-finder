@@ -52,7 +52,7 @@ async function fetchMeals() {
 function displayMeals(meals) {
     meals.forEach(meal => {
         const mealCard = `
-                    <div class="col-sm-12 col-md-4 col-lg-3">
+                    <div class="col-sm-6 col-md-4 col-lg-3">
                         <div class="container card custom-card h-100 shadow py-4">
                             <div class="watch-background">
                                 <a href="recipe-details.html?id=${meal.idMeal}">
