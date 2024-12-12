@@ -68,6 +68,12 @@
                         <li class="nav-item">
                             <a class="nav-link" href="./about.html">About us</a>
                         </li>
+                        <li class="nav-item">
+                            <select id="language_selector" onchange="translatePage()">
+                                <option value="en">English</option>
+                                <option value="bn">Bengali</option>
+                            </select>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -95,6 +101,7 @@
             </svg>
         </div>
         <!-- loader end -->
+        <div id="google_translate_element" style="display: none;"></div>
         <div class="page-headline">
             <h3 class="yellow-text text-center mt-5 mb-5 fs-2">
                 <div>About Our Recipe Finder</div>
@@ -224,7 +231,37 @@
                 document.getElementById("loader").style.display = "none";
             }, 1200);
         });
+
+
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({ pageLanguage: 'en' }, 'google_translate_element');
+        }
+
+        function translatePage() {
+            const language = document.getElementById("language_selector").value;
+            localStorage.setItem('selectedLanguage', language); // Save the selected language
+            const translateElement = document.querySelector('.goog-te-combo');
+
+            if (translateElement) {
+                translateElement.value = language;
+                translateElement.dispatchEvent(new Event('change'));
+            }
+        }
+
+        // Check and apply stored language on page load
+        window.onload = function () {
+            const storedLanguage = localStorage.getItem('selectedLanguage') || 'en'; // Default to English
+            document.getElementById("language_selector").value = storedLanguage; // Set dropdown to stored language
+            const translateElement = document.querySelector('.goog-te-combo');
+
+            if (translateElement) {
+                translateElement.value = storedLanguage;
+                translateElement.dispatchEvent(new Event('change'));
+            }
+        };
     </script>
+    <script type="text/javascript"
+        src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </body>
 
 </html>
