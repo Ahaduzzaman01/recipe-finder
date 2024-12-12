@@ -368,6 +368,14 @@ div#loader {
     z-index: 11111;
 }
 
+
+select#language_selector {
+    background-color: transparent;
+    border-radius: 5px;
+    outline: none;
+    margin-bottom: 2px;
+}
+
 @media only screen and (max-width: 1199px) {
     div#featured-category {
         grid-template-columns: repeat(5, 1fr);
