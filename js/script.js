@@ -837,3 +837,17 @@ window.addEventListener("load", function () {
         document.getElementById("loader").style.display = "none";
     }, 1200);
 });
+
+  function googleTranslateElementInit() {
+    new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+  }
+
+  function translatePage() {
+    const language = document.getElementById("language_selector").value;
+    const translateElement = document.querySelector('.goog-te-combo');
+    
+    if (translateElement) {
+      translateElement.value = language;  // Set the language in the Google Translate widget
+      translateElement.dispatchEvent(new Event('change'));  // Trigger the change event
+    }
+  }
