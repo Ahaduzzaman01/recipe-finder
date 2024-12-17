@@ -1,5 +1,6 @@
 // Define the API endpoint
 const apiUrl = "https://www.themealdb.com/api/json/v1/1/list.php?c=list";
+const idApiUrl = "https://www.themealdb.com/api/json/v1/1/lookup.php?i=";
 
 // Mockup object for SVG icons (replace this with your actual icons or SVG paths)
 const svgIcons = {
@@ -763,6 +764,16 @@ async function fetchCategoryMeals(url, limit) {
 	return limit ? data.meals.slice(0, limit) : data.meals;
 }
 
+async function fetchMealsById(ids) {
+	const fetchRequests = ids.map(id => fetch(`${idApiUrl}${id}`).then(res => res.json()));
+	const meals = await Promise.all(fetchRequests);
+	displayMeals(meals, "top-search-section");
+}
+
+if (document.getElementById('top-search-section')) {
+    fetchMealsById([53028, 53065, 52805, 52903]);
+}
+
 // Fetch meal details based on meal ID
 async function fetchMealDetails(meals) {
 	return Promise.all(
@@ -793,7 +804,6 @@ async function fetchMeals(category, limit = null, from = null) {
 // Display meals in specified section
 function displayMeals(mealDetails, sectionId) {
 	const container = document.getElementById(sectionId);
-	console.log(sectionId);
 	container.innerHTML = mealDetails
 		.map(({ meals }) => {
 			const meal = meals[0];
