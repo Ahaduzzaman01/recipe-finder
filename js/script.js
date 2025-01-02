@@ -764,15 +764,15 @@ async function fetchCategoryMeals(url, limit) {
 	return limit ? data.meals.slice(0, limit) : data.meals;
 }
 
-async function fetchMealsById(ids) {
-	const fetchRequests = ids.map(id => fetch(`${idApiUrl}${id}`).then(res => res.json()));
-	const meals = await Promise.all(fetchRequests);
-	displayMeals(meals, "top-search-section");
-}
+// async function fetchMealsById(ids) {
+// 	const fetchRequests = ids.map(id => fetch(`${idApiUrl}${id}`).then(res => res.json()));
+// 	const meals = await Promise.all(fetchRequests);
+// 	displayMeals(meals, "top-search-section");
+// }
 
-if (document.getElementById('top-search-section')) {
-    fetchMealsById([53028, 53065, 52805, 52903]);
-}
+// if (document.getElementById('top-search-section')) {
+//     fetchMealsById([53028, 53065, 52805, 52903]);
+// }
 
 // Fetch meal details based on meal ID
 async function fetchMealDetails(meals) {
